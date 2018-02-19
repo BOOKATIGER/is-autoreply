@@ -1,6 +1,6 @@
 {
   "name": "is-autoreply",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Detect if email is an autoreply according to the email headers.",
   "main": "index.js",
   "scripts": {
