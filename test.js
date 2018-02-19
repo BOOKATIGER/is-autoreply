@@ -2,9 +2,6 @@
 const isAutoreply = require('.');
 const assert      = require('assert');
 
-// Generally email is not autoreply
-assert.ok(!isAutoreply({}));
-
 // Test Auto-Submitted header
 assert.ok(!isAutoreply({ 'Auto-Submitted': 'No' }));
 assert.ok(!isAutoreply({ 'auto-submitted': 'no' }));
@@ -100,3 +97,11 @@ assert.ok(isAutoreply(Buffer.from('Delivered-To:   Autoresponder  ')));
 assert.ok(isAutoreply(Buffer.from('X-POST-MessageClass: 9; autoresponder')));
 assert.ok(isAutoreply(Buffer.from('X-POST-MessageClass:     9;      autoresponder     ')));
 assert.ok(!isAutoreply(Buffer.from('MIME-Version: 1.0')));
+
+// Test falsy header values
+assert.ok(!isAutoreply());
+assert.ok(!isAutoreply(''));
+assert.ok(!isAutoreply(Buffer.from('')));
+assert.ok(!isAutoreply(null));
+assert.ok(!isAutoreply([]));
+assert.ok(!isAutoreply({}));
