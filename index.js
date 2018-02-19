@@ -1,4 +1,6 @@
 
+const headerParse = require('header-parse');
+
 /**
  * Convert header names to lower case and normalize value to string.
  * @param {Object} headers  - Key/value object of headers
@@ -18,7 +20,9 @@ const normalizedHeaders = (headers) => {
  * @return {Boolean}        - True if autoreply, false otherwise
  */
 module.exports = (headers) => {
-    // TODO: maybe if headers is a string, we can parse it as email headers using a NPM module
+    if(typeof headers === 'string' || Buffer.isBuffer(headers)) {
+        headers = headerParse.parseHeaders(headers);
+    }
 
     headers = normalizedHeaders(headers);
 

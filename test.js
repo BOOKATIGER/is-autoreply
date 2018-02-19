@@ -86,3 +86,17 @@ assert.ok(isAutoreply({ 'X-Auto-Response-Suppress': 'OOF' }));
 assert.ok(isAutoreply({ 'x-auto-response-suppress': 'oof' }));
 assert.ok(isAutoreply({ 'x-auto-response-suppress': 'RN, NRN' }));
 assert.ok(isAutoreply({ 'x-auto-response-suppress': '' }));
+
+// Test string headers
+assert.ok(isAutoreply('Delivered-To: Autoresponder'));
+assert.ok(isAutoreply('Delivered-To:   Autoresponder  '));
+assert.ok(isAutoreply('X-POST-MessageClass: 9; autoresponder'));
+assert.ok(isAutoreply('X-POST-MessageClass:     9;      autoresponder     '));
+assert.ok(!isAutoreply('MIME-Version: 1.0'));
+
+// Test buffer headers
+assert.ok(isAutoreply(Buffer.from('Delivered-To: Autoresponder')));
+assert.ok(isAutoreply(Buffer.from('Delivered-To:   Autoresponder  ')));
+assert.ok(isAutoreply(Buffer.from('X-POST-MessageClass: 9; autoresponder')));
+assert.ok(isAutoreply(Buffer.from('X-POST-MessageClass:     9;      autoresponder     ')));
+assert.ok(!isAutoreply(Buffer.from('MIME-Version: 1.0')));

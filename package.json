@@ -42,5 +42,8 @@
   "bugs": {
     "url": "https://github.com/walling/is-autoreply/issues"
   },
-  "homepage": "https://github.com/walling/is-autoreply#readme"
+  "homepage": "https://github.com/walling/is-autoreply#readme",
+  "dependencies": {
+    "header-parse": "~0.1.0"
+  }
 }
