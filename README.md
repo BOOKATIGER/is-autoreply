@@ -8,8 +8,9 @@ Please [open an issue](https://github.com/walling/is-autoreply/issues) if an ema
 
 ## Installation
 
+```bash
 npm install --save is-autoreply
-
+```
 
 ## Programmatic usage
 
