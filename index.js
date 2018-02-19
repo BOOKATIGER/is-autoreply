@@ -20,7 +20,6 @@ const normalizedHeaders = (headers) => {
  * @return {Boolean}        - True if autoreply, false otherwise
  */
 module.exports = (headers) => {
-
     if (!headers) {
         return false;
     }
