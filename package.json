@@ -1,0 +1,33 @@
+{
+  "name": "is-autoreply",
+  "version": "0.1.0",
+  "description": "Detect if email is an autoreply according to the email headers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walling/is-autoreply.git"
+  },
+  "keywords": [
+    "email",
+    "autoreply",
+    "auto-reply",
+    "headers",
+    "autoresponse",
+    "auto-reponse",
+    "autoresponder",
+    "auto-reponder"
+  ],
+  "author": "Bjarke Walling <bwp@bwp.dk> (https://bjarkewalling.com)",
+  "contributors": [
+    "Bjarke Walling <bwp@bwp.dk> (https://bjarkewalling.com)",
+    "Khalid Rehioui <rehioui@gmail.com> (https://github.com/javascipt)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/walling/is-autoreply/issues"
+  },
+  "homepage": "https://github.com/walling/is-autoreply#readme"
+}
