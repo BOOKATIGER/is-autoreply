@@ -12,6 +12,13 @@ assert.ok(isAutoreply({ 'Auto-Submitted': 'Yes' }));
 assert.ok(isAutoreply({ 'auto-submitted': 'yes' }));
 assert.ok(isAutoreply({ 'auto-submitted': '' }));
 
+// Test Return-Path header
+assert.ok(!isAutoreply({ 'Return-Path': '' }));
+assert.ok(!isAutoreply({ 'Return-Path': 'foo@example.com' }));
+assert.ok(!isAutoreply({ 'return-path': 'foo@example.com' }));
+assert.ok(isAutoreply({ 'Return-Path': '<>' }));
+assert.ok(isAutoreply({ 'return-path': '<>' }));
+
 // Test X-Auto-Response-Suppress header
 assert.ok(!isAutoreply({ 'X-Auto-Response-Suppress': 'None' }));
 assert.ok(!isAutoreply({ 'x-auto-response-suppress': 'none' }));

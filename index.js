@@ -26,6 +26,9 @@ module.exports = (headers) => {
     if ('auto-submitted' in headers && headers['auto-submitted'].toLowerCase() !== 'no') {
         return true;
     }
+    if ('return-path' in headers && headers['return-path'] === '<>') {
+        return true;
+    }
     // TODO: add more here
 
     // Detecting MS Exchange/Outlook according to <https://msdn.microsoft.com/en-us/library/ee219609(v=exchg.80).aspx>
