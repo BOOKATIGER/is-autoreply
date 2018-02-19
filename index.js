@@ -41,6 +41,9 @@ module.exports = (headers) => {
     if ('x-fc-machinegenerated' in headers && headers['x-fc-machinegenerated'].toLowerCase() === 'true') {
         return true;
     }
+    if ('precedence' in headers && headers['precedence'].toLowerCase() === 'bulk') {
+        return true;
+    }
     if ('x-autoreply' in headers && headers['x-autoreply'].toLowerCase() === 'yes') {
         return true;
     }

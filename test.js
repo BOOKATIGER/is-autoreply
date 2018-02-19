@@ -23,7 +23,6 @@ assert.ok(isAutoreply({ 'return-path': '<>' }));
 // Test Preference and X-Preference header
 assert.ok(isAutoreply({ 'Preference': 'auto_reply' }));
 assert.ok(isAutoreply({ 'preference': 'auto_reply' }));
-assert.ok(isAutoreply({ 'preference': 'bulk' }));
 assert.ok(!isAutoreply({ 'Preference': 'not_auto_reply' }));
 assert.ok(isAutoreply({ 'X-Preference': 'auto_reply' }));
 assert.ok(isAutoreply({ 'x-preference': 'auto_reply' }));
@@ -54,6 +53,12 @@ assert.ok(!isAutoreply({ 'x-fc-machinegenerated': 'False' }));
 assert.ok(isAutoreply({ 'X-FC-MachineGenerated': 'true' }));
 assert.ok(isAutoreply({ 'x-fc-machinegenerated': 'True' }));
 assert.ok(!isAutoreply({ 'x-fc-machinegenerated': '' }));
+
+// Test Precedence header
+assert.ok(isAutoreply({ 'precedence': 'bulk' }));
+assert.ok(isAutoreply({ 'Precedence': 'Bulk' }));
+assert.ok(!isAutoreply({ 'precedence': 'somethingelse' }));
+assert.ok(!isAutoreply({ 'Precedence': 'somethingelse' }));
 
 // Test X-Autoreply header
 assert.ok(isAutoreply({ 'x-autoreply': 'Yes' }));
