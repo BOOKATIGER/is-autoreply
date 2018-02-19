@@ -20,6 +20,10 @@ const normalizedHeaders = (headers) => {
  * @return {Boolean}        - True if autoreply, false otherwise
  */
 module.exports = (headers) => {
+    if (!headers) {
+        return false;
+    }
+
     if(typeof headers === 'string' || Buffer.isBuffer(headers)) {
         headers = headerParse.parseHeaders(headers);
     }
