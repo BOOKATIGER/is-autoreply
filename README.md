@@ -16,6 +16,8 @@ npm install --save is-autoreply
 
 ## Programmatic usage
 
+Headers can be String, Buffer or Object (key/value). In case of String or Buffer, the headers are automatically parsed.
+
 ```js
 const isAutoreply  = require('is-autoreply');
 const emailHeaders = { 'X-Auto-Response-Suppress': 'OOF' };
