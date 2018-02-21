@@ -5,7 +5,7 @@
 
 Returns `true` if email is an autoreply according to the email headers.
 
-Please [open an issue](https://github.com/walling/is-autoreply/issues) if an email isn't properly detected as autoreply :)
+Please [open an issue](https://github.com/BOOKATIGER/is-autoreply/issues) if an email isn't properly detected as autoreply :)
 
 
 ## Installation
