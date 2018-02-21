@@ -1,7 +1,7 @@
 
 # is-autoreply
 
-![is-autoreply](https://api.travis-ci.org/walling/is-autoreply.svg)
+![is-autoreply](https://api.travis-ci.org/BOOKATIGER/is-autoreply.svg)
 
 Returns `true` if email is an autoreply according to the email headers.
 
