@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/walling/is-autoreply.git"
+    "url": "git+https://github.com/BOOKATIGER/is-autoreply.git"
   },
   "keywords": [
     "email",
@@ -40,9 +40,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/walling/is-autoreply/issues"
+    "url": "https://github.com/BOOKATIGER/is-autoreply/issues"
   },
-  "homepage": "https://github.com/walling/is-autoreply#readme",
+  "homepage": "https://github.com/BOOKATIGER/is-autoreply#readme",
   "dependencies": {
     "header-parse": "~0.1.0"
   }
