@@ -21,9 +21,9 @@ assert.ok(isAutoreply({ 'return-path': '<>' }));
 assert.ok(isAutoreply({ 'Preference': 'auto_reply' }));
 assert.ok(isAutoreply({ 'preference': 'auto_reply' }));
 assert.ok(!isAutoreply({ 'Preference': 'not_auto_reply' }));
-assert.ok(isAutoreply({ 'X-Preference': 'auto_reply' }));
-assert.ok(isAutoreply({ 'x-preference': 'auto_reply' }));
-assert.ok(!isAutoreply({ 'X-Preference': 'not_auto_reply' }));
+assert.ok(isAutoreply({ 'X-Precedence': 'auto_reply' }));
+assert.ok(isAutoreply({ 'x-precedence': 'auto_reply' }));
+assert.ok(!isAutoreply({ 'X-Precedence': 'not_auto_reply' }));
 
 // Test X-AutoRepsond header
 assert.ok(isAutoreply({ 'X-AutoRespond': '' }));
